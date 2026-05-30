@@ -4,9 +4,10 @@ import { currentMonth } from '../utils/format.js';
 import { calcCommitmentsTotal, calcGoalsMonthlyTotal, calcRemaining } from '../utils/calc.js';
 import { getCatData, COMMITMENT_CATEGORIES, GOAL_CATEGORIES } from '../components/CategoryData.js';
 import CatIcon from '../components/CategoryIcons.jsx';
+import SalaryQuest from '../components/SalaryQuest.jsx';
 
 export default function SalaryDay() {
-  const { settings, commitments, goals, confirmSalaryDay, fmt } = useApp();
+  const { settings, commitments, goals, confirmSalaryDay, updateCommitment, fmt } = useApp();
   const [salary, setSalary] = useState(String(settings.salary));
   const [goalContribs, setGoalContribs] = useState(
     Object.fromEntries(goals.filter(g => !g.completed).map(g => [g.id, String(g.monthlyContribution || 0)]))
@@ -39,6 +40,15 @@ export default function SalaryDay() {
 
   return (
     <div style={{ flex: 1, overflowY: 'auto', background: 'var(--bg)' }}>
+      {/* Game Layer */}
+      <SalaryQuest
+        salary={Number(salary)}
+        commitments={commitments}
+        goals={goals}
+        fmt={fmt}
+        onPayCommitment={updateCommitment}
+      />
+
       {/* Header */}
       <div style={{
         background: 'linear-gradient(135deg, #1A1650 0%, #13103A 100%)',

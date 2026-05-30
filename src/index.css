@@ -187,3 +187,347 @@ html, body {
 .mt-16 { margin-top: 16px; }
 .mt-24 { margin-top: 24px; }
 .p-16 { padding: 16px; }
+
+/* ── SalaryQuest ─────────────────────────────────────────── */
+.salary-quest {
+  margin: 16px;
+  padding: 18px;
+  border: 1px solid rgba(108, 99, 255, 0.28);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top, rgba(108,99,255,.28), transparent 34%),
+    linear-gradient(180deg, rgba(26,22,80,.96), rgba(13,10,38,.98));
+  box-shadow: 0 24px 70px rgba(0,0,0,.28);
+  overflow: hidden;
+  position: relative;
+}
+.salary-quest::before {
+  content: '';
+  position: absolute;
+  inset: -80px -60px auto auto;
+  width: 180px;
+  height: 180px;
+  background: rgba(0,201,167,.12);
+  filter: blur(35px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.salary-quest-hero {
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.salary-quest-topline {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.salary-quest h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -.5px;
+  margin-bottom: 10px;
+}
+.salary-quest h2 {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.salary-quest h3 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+.salary-quest-sub,
+.salary-quest-header p,
+.salary-quest-reward p {
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.salary-quest-monster-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 18px;
+}
+.salary-quest-monster {
+  width: min(230px, 72vw);
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,.35));
+  transform-origin: bottom center;
+  animation: salaryMonsterFloat 3.2s ease-in-out infinite;
+}
+.salary-quest-monster-large {
+  width: min(260px, 78vw);
+}
+@keyframes salaryMonsterFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+}
+.salary-quest-salary-card {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(108,99,255,.98), rgba(134,66,255,.82));
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 16px 45px rgba(108,99,255,.25);
+  margin-bottom: 18px;
+}
+.salary-quest-salary-card span {
+  display: block;
+  color: rgba(255,255,255,.75);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.salary-quest-salary-card strong {
+  font-family: 'Cairo', sans-serif;
+  font-size: 34px;
+  line-height: 1;
+}
+.salary-quest-btn {
+  margin-top: 14px;
+}
+.salary-quest-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.salary-quest-monster-card {
+  background: rgba(19,16,58,.72);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.salary-quest-speech {
+  width: fit-content;
+  max-width: 100%;
+  background: rgba(108,99,255,.22);
+  border: 1px solid rgba(108,99,255,.35);
+  color: var(--text);
+  border-radius: 18px 18px 6px 18px;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.salary-quest-progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text2);
+}
+.salary-quest-progress-head strong {
+  color: var(--text);
+  font-family: 'Cairo', sans-serif;
+}
+.salary-quest-progress {
+  height: 10px;
+  background: rgba(255,255,255,.08);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.salary-quest-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  transition: width .35s ease;
+}
+.salary-quest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.salary-quest-item {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.08);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 12px;
+  font-family: 'Mestika', 'Cairo', sans-serif;
+  text-align: right;
+}
+.salary-quest-item:active {
+  transform: scale(.99);
+}
+.salary-quest-item.is-paid {
+  background: rgba(0,201,167,.10);
+  border-color: rgba(0,201,167,.28);
+}
+.salary-quest-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  background: transparent;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+}
+.salary-quest-item.is-paid .salary-quest-check {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.salary-quest-item-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.salary-quest-item strong {
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  color: var(--text2);
+}
+.salary-quest-reward {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 24px;
+  background: rgba(255,184,48,.08);
+  border: 1px solid rgba(255,184,48,.24);
+  text-align: center;
+}
+.salary-quest-reward img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,.34));
+}
+.salary-quest-badge {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 16px;
+  color: var(--gold);
+  background: rgba(255,184,48,.10);
+  border: 1px solid rgba(255,184,48,.32);
+  font-weight: 900;
+}
+.salary-quest-streak {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: right;
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(255,255,255,.045);
+  border-radius: 16px;
+}
+.salary-quest-streak > span {
+  font-size: 24px;
+}
+.salary-quest-streak strong {
+  display: block;
+  font-size: 14px;
+}
+.salary-quest-streak p {
+  margin-top: 2px;
+  color: var(--text2);
+  font-size: 12px;
+}
+.salary-quest-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.salary-quest-summary-row {
+  display: grid;
+  grid-template-columns: 38px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.salary-quest-summary-row.is-highlight {
+  background: rgba(0,201,167,.10);
+  border-color: rgba(0,201,167,.28);
+}
+.salary-quest-summary-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: rgba(108,99,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.salary-quest-summary-row strong {
+  font-size: 14px;
+}
+.salary-quest-summary-row em {
+  font-style: normal;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+}
+.salary-quest-status {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(108,99,255,.12);
+  border: 1px solid rgba(108,99,255,.24);
+}
+.salary-quest-status span {
+  color: var(--text2);
+  font-size: 12px;
+}
+.salary-quest-status strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 17px;
+  color: var(--accent);
+}
+.salary-quest-status small {
+  display: block;
+  color: var(--text2);
+  margin-top: 2px;
+}
+.salary-quest-advice {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.salary-quest-advice img {
+  width: 80px;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,.28));
+}
+.salary-quest-advice p {
+  background: rgba(108,99,255,.18);
+  border: 1px solid rgba(108,99,255,.28);
+  padding: 10px 12px;
+  border-radius: 16px 16px 16px 6px;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 13px;
+}
