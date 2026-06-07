@@ -1,0 +1,233 @@
+{
+  "exportDate": "2026-06-07T08:00:00.000Z",
+  "settings": [
+    { "key": "salary",              "value": 25000 },
+    { "key": "salaryDay",           "value": 25 },
+    { "key": "currency",            "value": "ريال" },
+    { "key": "onboardingComplete",  "value": true },
+    { "key": "lockEnabled",         "value": false }
+  ],
+  "banks": [
+    {
+      "id": "bank-snb-001",
+      "name": "البنك الأهلي السعودي",
+      "emoji": "🏦",
+      "color": "#00873C",
+      "accounts": [
+        { "id": "snb-acc-001", "name": "حساب جاري" },
+        { "id": "snb-acc-002", "name": "حساب توفير" }
+      ]
+    },
+    {
+      "id": "bank-raj-002",
+      "name": "بنك الراجحي",
+      "emoji": "🕌",
+      "color": "#006B3C",
+      "accounts": [
+        { "id": "raj-acc-001", "name": "حساب جاري" },
+        { "id": "raj-acc-002", "name": "حساب الادخار" }
+      ]
+    },
+    {
+      "id": "bank-riy-003",
+      "name": "بنك الرياض",
+      "emoji": "💎",
+      "color": "#1B4FD8",
+      "accounts": [
+        { "id": "riy-acc-001", "name": "حساب جاري" }
+      ]
+    },
+    {
+      "id": "bank-sab-004",
+      "name": "بنك ساب",
+      "emoji": "🔴",
+      "color": "#CC0000",
+      "accounts": [
+        { "id": "sab-acc-001", "name": "حساب رواتب" }
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "com-001",
+      "name": "إيجار الشقة",
+      "amount": 4500,
+      "category": "rent",
+      "dayOfMonth": 1,
+      "bankId": "bank-raj-002",
+      "accountId": "raj-acc-001",
+      "paidThisMonth": true,
+      "active": true
+    },
+    {
+      "id": "com-002",
+      "name": "قسط السيارة — كامري 2023",
+      "amount": 1850,
+      "category": "installment",
+      "dayOfMonth": 5,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001",
+      "paidThisMonth": true,
+      "active": true
+    },
+    {
+      "id": "com-003",
+      "name": "فاتورة الكهرباء والمياه",
+      "amount": 380,
+      "category": "electricity",
+      "dayOfMonth": 10,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001",
+      "paidThisMonth": false,
+      "active": true
+    },
+    {
+      "id": "com-004",
+      "name": "اشتراك الإنترنت — STC",
+      "amount": 299,
+      "category": "internet",
+      "dayOfMonth": 12,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001",
+      "paidThisMonth": false,
+      "active": true
+    },
+    {
+      "id": "com-005",
+      "name": "نتفليكس + شاهد",
+      "amount": 89,
+      "category": "subscription",
+      "dayOfMonth": 15,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001",
+      "paidThisMonth": false,
+      "active": true
+    },
+    {
+      "id": "com-006",
+      "name": "تأمين صحي تكميلي",
+      "amount": 300,
+      "category": "bills",
+      "dayOfMonth": 1,
+      "bankId": "bank-raj-002",
+      "accountId": "raj-acc-001",
+      "paidThisMonth": true,
+      "active": true
+    },
+    {
+      "id": "com-007",
+      "name": "نادي ليجا الرياضي",
+      "amount": 200,
+      "category": "gym",
+      "dayOfMonth": 5,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001",
+      "paidThisMonth": true,
+      "active": true
+    },
+    {
+      "id": "com-008",
+      "name": "مصروف الوالدين",
+      "amount": 1000,
+      "category": "family",
+      "dayOfMonth": 25,
+      "bankId": "bank-raj-002",
+      "accountId": "raj-acc-001",
+      "paidThisMonth": false,
+      "active": true
+    },
+    {
+      "id": "com-009",
+      "name": "اشتراك iCloud",
+      "amount": 15,
+      "category": "subscription",
+      "dayOfMonth": 1,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001",
+      "paidThisMonth": true,
+      "active": true
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-001",
+      "name": "صندوق الطوارئ",
+      "targetAmount": 150000,
+      "savedAmount": 48000,
+      "targetDate": "2027-12-01",
+      "category": "emergency",
+      "monthlyContribution": 2000,
+      "completed": false,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-002"
+    },
+    {
+      "id": "goal-002",
+      "name": "حج هذا العام",
+      "targetAmount": 22000,
+      "savedAmount": 9500,
+      "targetDate": "2027-04-01",
+      "category": "other",
+      "monthlyContribution": 800,
+      "completed": false,
+      "bankId": "bank-raj-002",
+      "accountId": "raj-acc-002"
+    },
+    {
+      "id": "goal-003",
+      "name": "سيارة جديدة — باترول",
+      "targetAmount": 220000,
+      "savedAmount": 35000,
+      "targetDate": "2028-06-01",
+      "category": "car",
+      "monthlyContribution": 3000,
+      "completed": false,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-002"
+    },
+    {
+      "id": "goal-004",
+      "name": "رحلة أوروبا — العائلة",
+      "targetAmount": 28000,
+      "savedAmount": 6500,
+      "targetDate": "2027-07-01",
+      "category": "travel",
+      "monthlyContribution": 1500,
+      "completed": false,
+      "bankId": "bank-riy-003",
+      "accountId": "riy-acc-001"
+    },
+    {
+      "id": "goal-005",
+      "name": "MacBook Pro M4",
+      "targetAmount": 8500,
+      "savedAmount": 3500,
+      "targetDate": "2026-10-01",
+      "category": "electronics",
+      "monthlyContribution": 500,
+      "completed": false,
+      "bankId": "bank-snb-001",
+      "accountId": "snb-acc-001"
+    }
+  ],
+  "monthlyRecords": [
+    {
+      "month": "2026-06",
+      "salary": 25000,
+      "commitmentsTotal": 8633,
+      "goalsTotal": 7800,
+      "remaining": 8567,
+      "confirmedAt": "2026-06-01T08:30:00.000Z",
+      "goalContribs": {
+        "goal-001": 2000,
+        "goal-002": 800,
+        "goal-003": 3000,
+        "goal-004": 1500,
+        "goal-005": 500
+      }
+    }
+  ],
+  "expenses": [],
+  "debts": [],
+  "extraIncome": []
+}
